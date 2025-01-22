@@ -24,5 +24,10 @@ namespace Kreta.Backend.Repos
             return await _dbSet!
                 .FindByCondition<Student>(s =>s.SchoolYear==schoolYear && s.SchoolClass==schoolClassType).ToListAsync();
         }
+
+        public async Task<int> GetNumberOfStudent()
+        {
+            return await _dbSet!.CountAsync();
+        }
     }
 }
