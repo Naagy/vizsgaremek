@@ -13,5 +13,11 @@ namespace Kreta.Backend.Controllers
         {
             return Ok(await _studentRepo.GetByNameAsync(fullNameDto.FirstName, fullNameDto.LastName));
         }
+
+        [HttpGet("NumberOfStudent")]
+        public async Task<IActionResult> GetNumberOfStudent()
+        {
+            return Ok(await _studentRepo.GetNumberOfStudentAsync());
+        }
     }
 }

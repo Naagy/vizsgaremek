@@ -19,13 +19,13 @@ namespace Kreta.Backend.Repos
             return await _dbSet!.FindByCondition<Student>(s => s.FirstName == firstName && s.LastName == lastName).FirstOrDefaultAsync() ?? new Student();
         }
 
-        public async Task<List<Student>> GetStudentByClass(int schoolYear, SchoolClassType schoolClassType)
+        public async Task<List<Student>> GetStudentByClassAsync(int schoolYear, SchoolClassType schoolClassType)
         {
             return await _dbSet!
                 .FindByCondition<Student>(s =>s.SchoolYear==schoolYear && s.SchoolClass==schoolClassType).ToListAsync();
         }
 
-        public async Task<int> GetNumberOfStudent()
+        public async Task<int> GetNumberOfStudentAsync()
         {
             return await _dbSet!.CountAsync();
         }
