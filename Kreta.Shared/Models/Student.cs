@@ -37,6 +37,7 @@ namespace Kreta.Shared.Models
             SchoolYear = 9;
             SchoolClass = SchoolClassType.ClassA;
             EducationLevel = string.Empty;
+            IsWoman = true;
         }
 
         public Guid Id { get; set; }
