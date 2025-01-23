@@ -14,5 +14,10 @@ namespace Kreta.HttpService
         public StudentHttpService() : base()
         {            
         }
+
+        public Task<int> GetNumberOfStudentAsync()
+        {
+            
+        }
     }
 }
