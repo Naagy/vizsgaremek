@@ -7,11 +7,10 @@ namespace Kreta.Backend.Controllers
 {
     public partial class StudentController : BaseController<Student, StudentDto>
     {
-
-        [HttpGet("getstudentbyfullname")]
-        public async Task<IActionResult> GetStudentByFullName([FromQuery] FullNameQueryDto fullNameDto)
+        [HttpGet("NumberOfStudent")]
+        public async Task<IActionResult> GetNumberOfStudent()
         {
-            return Ok(await _studentRepo.GetByNameAsync(fullNameDto.FirstName, fullNameDto.LastName));
-        }        
+            return Ok(await _studentRepo.GetNumberOfStudentAsync());
+        }
     }
 }
