@@ -16,9 +16,18 @@ namespace Kreta.HttpService
         {            
         }
 
-        public Task<int> GetNumberOfStudentAsync()
+        public async Task<int> GetNumberOfStudentAsync()
         {
-            _httpClient.GetFromJsonAsync
+            try
+            {
+                int numberOfStudent = await _httpClient.GetFromJsonAsync<int>("api/Student/NumberOfStudent");
+                return numberOfStudent;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return -1;
         }
     }
 }
