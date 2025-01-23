@@ -7,6 +7,11 @@ namespace Kreta.Desktop.ViewModels.ControlPanel
     public class ControlPanelViewModel: BaseViewModel
     {
         private readonly IStudentHttpService _studentHttpService;
+
+        public ControlPanelViewModel()
+        {
+            _studentHttpService = new StudentHttpService();
+        }
         public ControlPanelViewModel(IStudentHttpService? studentHttpService)
         {
             _studentHttpService=studentHttpService ?? throw new ArgumentException(nameof(studentHttpService));
