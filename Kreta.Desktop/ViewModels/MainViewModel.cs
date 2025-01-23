@@ -4,6 +4,7 @@ using FontAwesome.Sharp;
 using Kreta.Desktop.ViewModels.Base;
 using Kreta.Desktop.ViewModels.ControlPanel;
 using Kreta.Desktop.ViewModels.SchoolCitizens;
+using System.Threading.Tasks;
 
 namespace Kreta.Desktop.ViewModels
 {
@@ -40,10 +41,11 @@ namespace Kreta.Desktop.ViewModels
         private BaseViewModel _currentChildView;
 
         [RelayCommand]
-        public void ShowDashbord()
+        public async Task ShowDashbord()
         {
             Caption = "Vezérlőpult";
             Icon=IconChar.SolarPanel;
+            await _controlPanelViewModel.InitializeAsync();
             CurrentChildView = _controlPanelViewModel;
         }
 
