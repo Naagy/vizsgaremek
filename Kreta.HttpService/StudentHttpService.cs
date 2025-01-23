@@ -2,6 +2,7 @@
 using Kreta.Shared.Assemblers;
 using Kreta.Shared.Dtos;
 using Kreta.Shared.Models;
+using System.Net.Http.Json;
 
 namespace Kreta.HttpService
 {
@@ -17,7 +18,7 @@ namespace Kreta.HttpService
 
         public Task<int> GetNumberOfStudentAsync()
         {
-            
+            _httpClient.GetFromJsonAsync
         }
     }
 }
