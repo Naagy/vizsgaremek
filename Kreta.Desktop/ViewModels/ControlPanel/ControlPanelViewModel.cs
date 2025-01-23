@@ -1,13 +1,17 @@
-﻿using Kreta.Desktop.ViewModels.Base;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Kreta.Desktop.ViewModels.Base;
 using Kreta.HttpService;
 using System;
 using System.Threading.Tasks;
 
 namespace Kreta.Desktop.ViewModels.ControlPanel
 {
-    public class ControlPanelViewModel: BaseViewModel
+    public partial class ControlPanelViewModel: BaseViewModel
     {
         private readonly IStudentHttpService _studentHttpService;
+
+        [ObservableProperty]
+        private int _numberOfStudent;
 
         public ControlPanelViewModel()
         {
@@ -26,7 +30,7 @@ namespace Kreta.Desktop.ViewModels.ControlPanel
 
         private async Task UpdateViewAsync()
         {
-            throw new NotImplementedException();
+            NumberOfStudent = await _studentHttpService.GetNumberOfStudentAsync();
         }
     }
 }

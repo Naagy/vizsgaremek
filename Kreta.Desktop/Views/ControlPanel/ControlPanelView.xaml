@@ -13,7 +13,7 @@
             <Label>Vezérlőpúlt</Label>
             <StackPanel Margin="2" Orientation="Horizontal">
                 <TextBlock Text="Diákok száma: " />
-                <TextBlock Text="25" />
+                <TextBlock Text="{Binding NumberOfStudent}" />
                 <TextBlock Text=" fő"/>
             </StackPanel>
         </StackPanel>
