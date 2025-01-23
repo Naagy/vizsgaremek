@@ -4,7 +4,7 @@ namespace Kreta.Shared.Models
 {
     public class Student : IDbEntity<Student>
     {
-        public Student(Guid id,string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel)
+        public Student(Guid id,string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel, bool isWoman)
         {
             Id=id;
             FirstName = firstName;
@@ -13,9 +13,10 @@ namespace Kreta.Shared.Models
             SchoolYear = schoolYear;
             SchoolClass = schoolClass;
             EducationLevel = educationLevel;
+            IsWoman = isWoman;
         }
 
-        public Student(string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel)
+        public Student(string firstName, string lastName, DateTime birthsDay, int schoolYear, SchoolClassType schoolClass, string educationLevel,bool isWoman)
         {
             Id=Guid.NewGuid();
             FirstName = firstName;
@@ -24,6 +25,7 @@ namespace Kreta.Shared.Models
             SchoolYear = schoolYear;
             SchoolClass = schoolClass;
             EducationLevel = educationLevel;
+            IsWoman = isWoman;
         }
 
         public Student()
@@ -43,6 +45,9 @@ namespace Kreta.Shared.Models
         public DateTime BirthsDay { get; set; }
         public int SchoolYear { get; set; }
         public SchoolClassType SchoolClass { get; set; }
+        public bool IsWoman { get; set; }
+        public bool IsMan => !IsWoman;
+
         public string EducationLevel { get; set; }
         public bool HasId => Id != Guid.Empty;
 
