@@ -18,4 +18,14 @@
         <Setter Property="FontSize" Value="14"></Setter>
         <Setter Property="FontWeight" Value="Medium"></Setter>
     </Style>
+
+    <!-- Real Madrid színek -->
+    <SolidColorBrush x:Key="backgroundPrimaryColor" Color="#1E2A47"/>
+    <!-- Sötétkék -->
+    <SolidColorBrush x:Key="backgroundColorThird" Color="#F7B731"/>
+    <!-- Arany -->
+    <SolidColorBrush x:Key="backgroundColorFourth" Color="#C3D1D9"/>
+    <!-- Világos kék -->
+    <SolidColorBrush x:Key="plainTextColor3" Color="#FFFFFF"/>
+    <!-- Fehér -->
 </ResourceDictionary>

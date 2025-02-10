@@ -53,4 +53,13 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
+    <!-- Real Madrid színek -->
+    <SolidColorBrush x:Key="panelOverColor" Color="#003B5C"/>
+    <!-- Real Madrid kék (hover) -->
+    <SolidColorBrush x:Key="panelActiveColor" Color="#F1C40F"/>
+    <!-- Real Madrid arany (aktivált) -->
+    <SolidColorBrush x:Key="plainTextColor3" Color="#FFFFFF"/>
+    <!-- Fehér szöveg szín -->
+    <SolidColorBrush x:Key="titleColor3" Color="#F1C40F"/>
+    <!-- Arany szöveg szín -->
 </ResourceDictionary>

@@ -26,4 +26,12 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <!--Színek cseréje a Real Madrid színeire-->
+    <SolidColorBrush x:Key="StandardButtonBackground" Color="#003B5C"></SolidColorBrush>
+    <!-- Real Madrid kék -->
+    <SolidColorBrush x:Key="StandardButtonEnabled" Color="#F1C40F"></SolidColorBrush>
+    <!-- Real Madrid arany -->
+    <SolidColorBrush x:Key="StandardButtonNotEnabled" Color="Gray"></SolidColorBrush>
+    <!-- Szürke, amikor nem engedélyezett -->
 </ResourceDictionary>

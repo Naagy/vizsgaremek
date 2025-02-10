@@ -26,6 +26,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
     <!--Menu button icon-->
     <Style x:Key="controlButtonIcon" TargetType="fa:IconImage">
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}"/>
@@ -33,4 +34,9 @@
         <Setter Property="Height" Value="9"/>
     </Style>
 
+    <!-- Real Madrid színek -->
+    <SolidColorBrush x:Key="plainTextColor3" Color="#FFFFFF"/>
+    <!-- Fehér -->
+    <SolidColorBrush x:Key="controlHoverColor" Color="#F7B731"/>
+    <!-- Arany -->
 </ResourceDictionary>
