@@ -1,8 +1,8 @@
-﻿using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Shared.Models;
+using Real.Shared.Responses;
 using System.Linq.Expressions;
 
-namespace Kreta.Backend.Repos.Base
+namespace Real.Backend.Repos.Base
 {
     public interface IBaseRepo <TEntity> where TEntity : class , IDbEntity<TEntity>, new()
     {

@@ -1,4 +1,4 @@
-﻿namespace Kreta.Shared.Assemblers
+﻿namespace Real.Shared.Assemblers
 {
     public abstract class Assambler<Tmodel, TDto>
     {

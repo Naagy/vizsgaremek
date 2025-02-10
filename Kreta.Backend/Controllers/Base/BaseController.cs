@@ -1,10 +1,10 @@
-﻿using Kreta.Backend.Repos.Base;
-using Kreta.Shared.Assemblers;
-using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Backend.Repos.Base;
+using Real.Shared.Assemblers;
+using Real.Shared.Models;
+using Real.Shared.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Kreta.Backend.Controllers.Base
+namespace Real.Backend.Controllers.Base
 {
     public abstract class BaseController<TModel,TDto> : ControllerBase
         where TModel : class,IDbEntity<TModel>,new()

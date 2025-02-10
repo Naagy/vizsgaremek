@@ -1,5 +1,5 @@
-using Kreta.Backend.Context;
-using Kreta.Backend.Extensions;
+using Real.Backend.Context;
+using Real.Backend.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,7 @@ var app = builder.Build();
 // InMemory database data
 using (var scope = app.Services.CreateAsyncScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<KretaInMemoryContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<RealInMemoryContext>();
 
     // InMemory test data
     dbContext.Database.EnsureCreated();
@@ -35,7 +35,7 @@ using (var scope = app.Services.CreateAsyncScope())
 app.UseHttpsRedirection();
 
 // Cors
-app.UseCors("KretaCors");
+app.UseCors("RealCors");
 
 app.UseAuthorization();
 

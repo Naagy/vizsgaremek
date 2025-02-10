@@ -1,14 +1,14 @@
-﻿using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Shared.Models;
+using Real.Shared.Responses;
 
-namespace Kreta.HttpService
+namespace Real.HttpService
 {
     public interface ISubjectHttpService
     {
-        Task<List<Student>> GetAllAsync();
-        Task<Student> GetByIdAsync(Guid id);
-        Task<Response> CreateAsync(Student student);
-        Task<Response> UpdateAsync(Student student);
+        Task<List<Player>> GetAllAsync();
+        Task<Player> GetByIdAsync(Guid id);
+        Task<Response> CreateAsync(Player player);
+        Task<Response> UpdateAsync(Player player);
         Task<Response> DeleteAsync(Guid id);
     }
 }

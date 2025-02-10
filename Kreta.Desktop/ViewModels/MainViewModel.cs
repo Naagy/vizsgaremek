@@ -1,31 +1,31 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FontAwesome.Sharp;
-using Kreta.Desktop.ViewModels.Base;
-using Kreta.Desktop.ViewModels.ControlPanel;
-using Kreta.Desktop.ViewModels.SchoolCitizens;
+using Real.Desktop.ViewModels.Base;
+using Real.Desktop.ViewModels.ControlPanel;
+using Real.Desktop.ViewModels.RealCitizens;
 using System.Threading.Tasks;
 
-namespace Kreta.Desktop.ViewModels
+namespace Real.Desktop.ViewModels
 {
     public partial class MainViewModel : BaseViewModel
     {
         private ControlPanelViewModel _controlPanelViewModel;
-        private SchoolCitizensViewModel _schoolCitizensViewModel;
+        private RealCitizensViewModel _realCitizensViewModel;
 
         public MainViewModel()
         {
             _controlPanelViewModel = new ControlPanelViewModel();
-            _schoolCitizensViewModel = new SchoolCitizensViewModel();
+            _realCitizensViewModel = new RealCitizensViewModel();
         }
 
         public MainViewModel(
             ControlPanelViewModel controlPanelViewModel,
-            SchoolCitizensViewModel schoolCitizensViewModel
+            RealCitizensViewModel realCitizensViewModel
             )
         {
             _controlPanelViewModel = controlPanelViewModel;
-            _schoolCitizensViewModel = schoolCitizensViewModel;
+            _realCitizensViewModel = realCitizensViewModel;
 
             CurrentChildView = _controlPanelViewModel;
             ShowDashbord();
@@ -50,11 +50,11 @@ namespace Kreta.Desktop.ViewModels
         }
 
         [RelayCommand]
-        public void ShowSchoolCitizens()
+        public void ShowRealCitizens()
         {
-            Caption = "Iskolapolgárok";
+            Caption = "Csapat";
             Icon = IconChar.UserGroup;
-            CurrentChildView = _schoolCitizensViewModel;
+            CurrentChildView = _realCitizensViewModel;
         }
     }
 }

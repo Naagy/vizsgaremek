@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Real.Desktop.Views.RealCitizens.RealCitizensMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModels="clr-namespace:Real.Desktop.ViewModels.RealCitizens"
+             d:DataContext="{d:DesignInstance Type=viewModels:RealCitizensViewModel, IsDesignTimeCreatable=True}"
+             xmlns:local="clr-namespace:Real.Desktop.Views.RealCitizens"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="800">
+    <Border Background="{StaticResource backgroundColorThird}">
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button 
+                Style="{StaticResource subMenuButton}"
+                Width="150"
+                Content="Club"
+            />
+            <Button 
+                Style="{StaticResource subMenuButton}"
+                HorizontalAlignment="Left"
+                Width="150"
+                Margin="12 0 0 0"
+                Content="Játékosok"
+                Command="{Binding ShowPlayerViewCommand}"
+            />
+            <Button 
+                Style="{StaticResource subMenuButton}"           
+                HorizontalAlignment="Left"
+                Width="150"
+                Margin="12 0 0 0"
+                Content="Edzők"
+             />
+        </StackPanel>
+    </Border>
+</UserControl>

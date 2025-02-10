@@ -1,7 +1,7 @@
-﻿using Kreta.Shared.Dtos;
-using Kreta.Shared.Models;
+﻿using Real.Shared.Dtos;
+using Real.Shared.Models;
 
-namespace Kreta.Shared.Extensions
+namespace Real.Shared.Extensions
 {
     public static class SubjectExtension
     {

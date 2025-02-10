@@ -1,4 +1,4 @@
-﻿namespace Kreta.Shared.Dtos
+﻿namespace Real.Shared.Dtos
 {
     public class SubjectDto
     {

@@ -1,12 +1,12 @@
-﻿using Kreta.Backend.Repos;
-using Kreta.Backend.Repos.Base;
-using Kreta.Shared.Assamblers;
-using Kreta.Shared.Dtos;
-using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Backend.Repos;
+using Real.Backend.Repos.Base;
+using Real.Shared.Assamblers;
+using Real.Shared.Dtos;
+using Real.Shared.Models;
+using Real.Shared.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Kreta.Backend.Controllers
+namespace Real.Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

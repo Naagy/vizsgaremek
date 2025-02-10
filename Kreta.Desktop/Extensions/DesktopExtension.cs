@@ -1,10 +1,10 @@
-﻿using Kreta.HttpService;
-using Kreta.Shared.Assamblers;
-using Kreta.Shared.Assemblers;
+﻿using Real.HttpService;
+using Real.Shared.Assamblers;
+using Real.Shared.Assemblers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace Kreta.Desktop.Extensions
+namespace Real.Desktop.Extensions
 {
     public static class DesktopExtensions
     {
@@ -17,19 +17,19 @@ namespace Kreta.Desktop.Extensions
 
         private static void ConfigureHttpClient(this IServiceCollection services)
         {
-            services.AddHttpClient("KretaApi", configureClient => { configureClient.BaseAddress = new Uri("https://localhost:7090/"); });
+            services.AddHttpClient("RealApi", configureClient => { configureClient.BaseAddress = new Uri("https://localhost:7090/"); });
         }
 
         private static void ConfigureHttpServices(this IServiceCollection services)
         {
-            services.AddScoped<IStudentHttpService, StudentHttpService>();
+            services.AddScoped<IPlayerHttpService, PlayerHttpService>();
             services.AddScoped<ISubjectHttpService, SubjectHttpService>();
         }
 
         private static void ConfigureAssamblers(this IServiceCollection services)
         {
             {
-                services.AddScoped<StudentAssembler>();
+                services.AddScoped<PlayerAssembler>();
                 services.AddScoped<SubjectAssambler>();
             }
         }

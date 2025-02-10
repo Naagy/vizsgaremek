@@ -1,8 +1,8 @@
-﻿using Kreta.Shared.Models;
+﻿using Real.Shared.Models;
 using System;
 using System.Net;
 
-namespace Kreta.Desktop.Repositories
+namespace Real.Desktop.Repositories
 {
     public class UserRepository
     {

@@ -1,7 +1,7 @@
-﻿using Kreta.Backend.Repos.Base;
-using Kreta.Shared.Models;
+﻿using Real.Backend.Repos.Base;
+using Real.Shared.Models;
 
-namespace Kreta.Backend.Repos
+namespace Real.Backend.Repos
 {
     public interface ISubjectRepo : IBaseRepo<Subject>
     {

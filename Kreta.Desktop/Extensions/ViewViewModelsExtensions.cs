@@ -1,14 +1,14 @@
-﻿using Kreta.Desktop.ViewModels;
-using Kreta.Desktop.ViewModels.ControlPanel;
-using Kreta.Desktop.ViewModels.Login;
-using Kreta.Desktop.ViewModels.SchoolCitizens;
-using Kreta.Desktop.Views;
-using Kreta.Desktop.Views.ControlPanel;
-using Kreta.Desktop.Views.Login;
-using Kreta.Desktop.Views.SchoolCitizens;
+﻿using Real.Desktop.ViewModels;
+using Real.Desktop.ViewModels.ControlPanel;
+using Real.Desktop.ViewModels.Login;
+using Real.Desktop.ViewModels.RealCitizens;
+using Real.Desktop.Views;
+using Real.Desktop.Views.ControlPanel;
+using Real.Desktop.Views.Login;
+using Real.Desktop.Views.RealCitizens;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace KretaDesktop.Extensions
+namespace RealDesktop.Extensions
 {
     public static class ViewViewModelsExtensions
     {
@@ -34,19 +34,19 @@ namespace KretaDesktop.Extensions
             {
                 DataContext = s.GetRequiredService<ControlPanelViewModel>()
             });
-            // School Citizens
-            services.AddSingleton<SchoolCitizensViewModel>();
-            services.AddSingleton<SchoolCitizensView>(s => new SchoolCitizensView()
+            // Real Citizens
+            services.AddSingleton<RealCitizensViewModel>();
+            services.AddSingleton<RealCitizensView>(s => new RealCitizensView()
             {
-                DataContext = s.GetRequiredService<SchoolCitizensViewModel>()
+                DataContext = s.GetRequiredService<RealCitizensViewModel>()
             });
 
-            // Students
-            // School Citizens
-            services.AddSingleton<StudentViewModel>();
-            services.AddSingleton<StudentView>(s => new StudentView()
+            // Players
+            // Real Citizens
+            services.AddSingleton<PlayerViewModel>();
+            services.AddSingleton<PlayerView>(s => new PlayerView()
             {
-                DataContext = s.GetRequiredService<StudentViewModel>()
+                DataContext = s.GetRequiredService<PlayerViewModel>()
             });
 
         }

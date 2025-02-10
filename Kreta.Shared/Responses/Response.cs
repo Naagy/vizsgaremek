@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kreta.Shared.Responses
+namespace Real.Shared.Responses
 {
     public class Response : ErrorStore
     {

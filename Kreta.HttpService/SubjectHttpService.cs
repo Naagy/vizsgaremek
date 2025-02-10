@@ -1,10 +1,10 @@
-﻿using Kreta.Shared.Dtos;
-using Kreta.Shared.Extensions;
-using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Shared.Dtos;
+using Real.Shared.Extensions;
+using Real.Shared.Models;
+using Real.Shared.Responses;
 using System.Net.Http.Json;
 
-namespace Kreta.HttpService
+namespace Real.HttpService
 {
     public class SubjectHttpService : ISubjectHttpService
     {
@@ -17,9 +17,9 @@ namespace Kreta.HttpService
         public SubjectHttpService(IHttpClientFactory? httpClientFactory)
         {
             if (httpClientFactory == null) throw new ArgumentNullException(nameof(httpClientFactory));
-            _httpClient = httpClientFactory.CreateClient("KretaApi");
+            _httpClient = httpClientFactory.CreateClient("RealApi");
         }
-        public Task<Response> CreateAsync(Student student)
+        public Task<Response> CreateAsync(Player player)
         {
             throw new NotImplementedException();
         }
@@ -29,26 +29,26 @@ namespace Kreta.HttpService
             throw new NotImplementedException();
         }
 
-        public async Task<List<Student>> GetAllAsync()
+        public async Task<List<Player>> GetAllAsync()
         {
             try
             {
-                List<StudentDto>? resultDto = await _httpClient.GetFromJsonAsync<List<StudentDto>>("api/Student");
+                List<PlayerDto>? resultDto = await _httpClient.GetFromJsonAsync<List<PlayerDto>>("api/Player");
                 if (resultDto != null)
-                    return resultDto.Select(dto => dto.ToStudent()).ToList();
+                    return resultDto.Select(dto => dto.ToPlayer()).ToList();
             }
             catch (Exception ex)
             {
             }
-            return new List<Student>();
+            return new List<Player>();
         }
 
-        public Task<Student> GetByIdAsync(Guid id)
+        public Task<Player> GetByIdAsync(Guid id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Response> UpdateAsync(Student student)
+        public Task<Response> UpdateAsync(Player player)
         {
             throw new NotImplementedException();
         }

@@ -1,4 +1,4 @@
-﻿namespace Kreta.Shared.Models
+﻿namespace Real.Shared.Models
 {
     public class UserAccount
     {

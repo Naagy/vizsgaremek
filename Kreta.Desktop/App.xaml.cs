@@ -1,13 +1,13 @@
-﻿using Kreta.Desktop.Extensions;
-using Kreta.Desktop.Views;
-using Kreta.Desktop.Views.Login;
-using KretaDesktop.Extensions;
+﻿using Real.Desktop.Extensions;
+using Real.Desktop.Views;
+using Real.Desktop.Views.Login;
+using RealDesktop.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Windows;
 
-namespace Kreta.Desktop
+namespace Real.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml

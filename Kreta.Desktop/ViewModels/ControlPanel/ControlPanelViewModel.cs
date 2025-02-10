@@ -1,25 +1,25 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Kreta.Desktop.ViewModels.Base;
-using Kreta.HttpService;
+using Real.Desktop.ViewModels.Base;
+using Real.HttpService;
 using System;
 using System.Threading.Tasks;
 
-namespace Kreta.Desktop.ViewModels.ControlPanel
+namespace Real.Desktop.ViewModels.ControlPanel
 {
     public partial class ControlPanelViewModel: BaseViewModel
     {
-        private readonly IStudentHttpService _studentHttpService;
+        private readonly IPlayerHttpService _playerHttpService;
 
         [ObservableProperty]
-        private int _numberOfStudent;
+        private int _numberOfPlayer;
 
         public ControlPanelViewModel()
         {
-            _studentHttpService = new StudentHttpService();
+            _playerHttpService = new PlayerHttpService();
         }
-        public ControlPanelViewModel(IStudentHttpService? studentHttpService)
+        public ControlPanelViewModel(IPlayerHttpService? playerHttpService)
         {
-            _studentHttpService=studentHttpService ?? throw new ArgumentException(nameof(studentHttpService));
+            _playerHttpService=playerHttpService ?? throw new ArgumentException(nameof(playerHttpService));
         }
 
         public async override Task InitializeAsync()
@@ -30,7 +30,7 @@ namespace Kreta.Desktop.ViewModels.ControlPanel
 
         private async Task UpdateViewAsync()
         {
-            NumberOfStudent = await _studentHttpService.GetNumberOfStudentAsync();
+            NumberOfPlayer = await _playerHttpService.GetNumberOfPlayerAsync();
         }
     }
 }

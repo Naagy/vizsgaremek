@@ -1,7 +1,7 @@
-﻿using Kreta.Shared.Models;
+﻿using Real.Shared.Models;
 using System.Linq.Expressions;
 
-namespace Kreta.Backend.Repos.Base
+namespace Real.Backend.Repos.Base
 {
     public static class IQuerybleExtension
     {

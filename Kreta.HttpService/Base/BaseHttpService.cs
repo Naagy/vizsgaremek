@@ -1,9 +1,9 @@
-﻿using Kreta.Shared.Assemblers;
-using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Shared.Assemblers;
+using Real.Shared.Models;
+using Real.Shared.Responses;
 using System.Net.Http.Json;
 
-namespace Kreta.HttpService.Base
+namespace Real.HttpService.Base
 {
     public class BaseHttpService<TModel, TDto> : IBaseHttpService<TModel>
         where TModel : class, IDbEntity<TModel>, new()
@@ -23,7 +23,7 @@ namespace Kreta.HttpService.Base
         {
             if (assambler == null) throw new ArgumentNullException(nameof(assambler));
             if (httpClientFactory == null) throw new ArgumentNullException(nameof(httpClientFactory));
-            _httpClient = httpClientFactory.CreateClient("KretaApi");
+            _httpClient = httpClientFactory.CreateClient("RealApi");
             _assambler = assambler;
         }
         public Task<Response> CreateAsync(TModel entity)

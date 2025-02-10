@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kreta.Shared.Models
+namespace Real.Shared.Models
 {
     public interface IDbEntity<TEntity> where TEntity : class, new()
     {

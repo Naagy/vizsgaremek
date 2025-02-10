@@ -1,9 +1,9 @@
-﻿using Kreta.Shared.Models;
-using Kreta.Shared.Responses;
+﻿using Real.Shared.Models;
+using Real.Shared.Responses;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Kreta.Backend.Repos.Base
+namespace Real.Backend.Repos.Base
 {
     public class BaseRepo<TDbContext, TEntity> : IBaseRepo<TEntity>
         where TDbContext : DbContext
@@ -79,7 +79,7 @@ namespace Kreta.Backend.Repos.Base
                     response.AppendNewError(e.Message);
                 }
             }
-            response.AppendNewError($"{nameof(BaseRepo<TDbContext, TEntity>)} osztály, {nameof(DeleteAsync)} metódusban hiba keletkezett");
+            response.AppendNewError($"{nameof(BaseRepo<TDbContext, TEntity>)} szint, {nameof(DeleteAsync)} metódusban hiba keletkezett");
             if (entityToDelete is not null)
                 response.AppendNewError($"Az entitás id:{entityToDelete.Id}");
             response.AppendNewError($"Az entitás törlése nem sikerült!");

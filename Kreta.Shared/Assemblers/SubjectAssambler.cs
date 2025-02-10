@@ -1,9 +1,9 @@
-﻿using Kreta.Shared.Assemblers;
-using Kreta.Shared.Dtos;
-using Kreta.Shared.Extensions;
-using Kreta.Shared.Models;
+﻿using Real.Shared.Assemblers;
+using Real.Shared.Dtos;
+using Real.Shared.Extensions;
+using Real.Shared.Models;
 
-namespace Kreta.Shared.Assamblers
+namespace Real.Shared.Assamblers
 {
     public class SubjectAssambler : Assambler<Subject, SubjectDto>
     {

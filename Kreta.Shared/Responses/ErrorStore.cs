@@ -1,4 +1,4 @@
-﻿namespace Kreta.Shared.Responses
+﻿namespace Real.Shared.Responses
 {
     public class ErrorStore
     {
