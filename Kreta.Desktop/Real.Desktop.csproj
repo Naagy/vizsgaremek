@@ -18,8 +18,8 @@
     <None Remove="Images\back-image.jpg" />
     <None Remove="Images\key-icon.png" />
     <None Remove="Images\kreta.png" />
-    <None Remove="Images\kreta_atl.png" />
-    <None Remove="Images\profil.jpg" />
+    <None Remove="Images\madrid.jpg" />
+    <None Remove="Images\madrid_logo.png" />
     <None Remove="Images\profile.png" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
@@ -42,8 +42,8 @@
     <Resource Include="Images\back-image.jpg" />
     <Resource Include="Images\key-icon.png" />
     <Resource Include="Images\kreta.png" />
-    <Resource Include="Images\kreta_atl.png" />
-    <Resource Include="Images\profil.jpg" />
+    <Resource Include="Images\madrid.jpg" />
+    <Resource Include="Images\madrid_logo.png" />
     <Resource Include="Images\profile.png" />
     <Resource Include="Images\user-icon.png" />
   </ItemGroup>

@@ -28,7 +28,7 @@
                             StrokeThickness="2"                                 
                             Margin="-1,-1,-1,-1">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="/Images/profil.jpg"/>
+                                <ImageBrush ImageSource="/Images/madrid_logo.png"/>
                             </Ellipse.Fill>
                         </Ellipse>
                     </Border>
